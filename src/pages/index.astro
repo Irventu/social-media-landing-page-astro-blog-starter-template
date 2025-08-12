@@ -1,50 +1,153 @@
----
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
----
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Icon Manager – Social Media Icon Management Made Simple</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: #333;
+        background-color: #f8f9fa;
+    }
+    header {
+        text-align: center;
+        padding: 60px 20px 40px;
+        background: #0d6efd;
+        color: #fff;
+    }
+    header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+    header p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+    }
+    .cta-btn {
+        background: #ffc107;
+        color: #000;
+        padding: 14px 28px;
+        font-size: 1rem;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+    .section {
+        padding: 50px 20px;
+        max-width: 1100px;
+        margin: auto;
+    }
+    .section h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        color: #0d6efd;
+    }
+    .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    .feature {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .feature h3 {
+        margin-top: 0;
+        color: #0d6efd;
+    }
+    .pricing {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+    .price-plan {
+        background: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        flex: 1;
+        min-width: 250px;
+        max-width: 300px;
+        text-align: center;
+    }
+    .price-plan h3 {
+        color: #0d6efd;
+    }
+    .footer {
+        text-align: center;
+        padding: 20px;
+        background: #0d6efd;
+        color: white;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Icon Manager</h1>
+    <p>Manage and update your website’s social media icons instantly — from one dashboard.</p>
+    <button class="cta-btn">Get Started Free</button>
+</header>
+
+<section class="section">
+    <h2>Why Icon Manager?</h2>
+    <div class="features">
+        <div class="feature">
+            <h3>One Dashboard</h3>
+            <p>Update social icons across all your websites without touching code.</p>
+        </div>
+        <div class="feature">
+            <h3>Works Everywhere</h3>
+            <p>Compatible with WordPress, Wix, Shopify, Drupal, static sites, and more.</p>
+        </div>
+        <div class="feature">
+            <h3>Customizable Styles</h3>
+            <p>Choose from a variety of icon designs, colors, and sizes to match your brand.</p>
+        </div>
+        <div class="feature">
+            <h3>Instant Updates</h3>
+            <p>Changes go live instantly — no redeployment or technical skills needed.</p>
+        </div>
+        <div class="feature">
+            <h3>Analytics Built-in</h3>
+            <p>Track clicks and engagement across all your social icons.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <h2>Pricing</h2>
+    <div class="pricing">
+        <div class="price-plan">
+            <h3>Free</h3>
+            <p>$0/month</p>
+            <p>1 site, up to 3 icons</p>
+            <button class="cta-btn">Sign Up</button>
+        </div>
+        <div class="price-plan">
+            <h3>Pro</h3>
+            <p>$9/month</p>
+            <p>Unlimited icons, analytics, custom styles</p>
+            <button class="cta-btn">Upgrade</button>
+        </div>
+        <div class="price-plan">
+            <h3>Agency</h3>
+            <p>$29/month</p>
+            <p>Manage up to 10 sites</p>
+            <button class="cta-btn">Contact Us</button>
+        </div>
+    </div>
+</section>
+
+<div class="footer">
+    <p>© 2025 Icon Manager. All Rights Reserved.</p>
+</div>
+
+</body>
 </html>
